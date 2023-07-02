@@ -20,7 +20,7 @@ public class BookingProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
     public void sendMessage(BookingEvent event){
-        LOGGER.info(String.format("FLight Event Created. Added a new flight => %s", event.toString()));
+        LOGGER.info(String.format("Booking Event Created. Added a new Booking => %s", event.toString()));
 
         Message<BookingEvent> message = MessageBuilder
                 .withPayload(event)
